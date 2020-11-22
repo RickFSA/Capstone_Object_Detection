@@ -18,7 +18,7 @@ python generate_tfrecord.py --csv_input=images/test_labels.csv --image_dir=image
 python model_main_tf2.py --pipeline_config_path=training/faster_rcnn_resnet101_v1_800x1333_coco17_gpu-8.config --model_dir=training --alsologtostderr
 
 4. Tensorboard: \
-python --logdir=training/train
+tensorboard --logdir=training/train
 
 5. Extract inference graph: \
 python exporter_main_v2.py --pipeline_config_path training/faster_rcnn_resnet101_v1_800x1333_coco17_gpu-8.config --trained_checkpoint_dir training --output_directory inference_graph
